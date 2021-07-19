@@ -149,8 +149,8 @@ const MenuContainer = styled.div`
     display:flex;
     flex-direction: row;
     transition: 0.4s;
-    transform: translateY(5%);
-    opacity: 100;
+    transform: translateY(-100%);
+    opacity: 0;
     padding:20px;
     &:hover{
         transform: translateY(5%);
