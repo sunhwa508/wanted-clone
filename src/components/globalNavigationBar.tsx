@@ -282,19 +282,19 @@ const GlobalNavigationBar = () => {
                 </MobileMenuHeader>
                 <MobileMenuContents>
                     <MobileMenuHeader>
-                        <li><a>MY 원티드</a></li>
+                        <li><a href='#!'>MY 원티드</a></li>
                         <CgProfile size="20px" />
                     </MobileMenuHeader>
-                    <li><a>프로필</a></li>
-                    <li className="border"><a>이력서</a></li>
-                    <li><a>매치업</a></li>
-                    <li><a>추천</a></li>
-                    <li><a>지원 현황</a></li>
-                    <li><a>프리랜서</a></li>
-                    <li className="border"><a>직군별 연봉</a></li>
-                    <li><a>커리어 성장</a></li>
-                    <li className="border"><a>기업 서비스</a></li>
-                    <GrayColored><a>로그아웃</a></GrayColored>
+                    <li><a href='#!'>프로필</a></li>
+                    <li className="border"><a href='#!'>이력서</a></li>
+                    <li><a href='#!'>매치업</a></li>
+                    <li><a href='#!'>추천</a></li>
+                    <li><a href='#!'>지원 현황</a></li>
+                    <li><a href='#!'>프리랜서</a></li>
+                    <li className="border"><a href='#!'>직군별 연봉</a></li>
+                    <li><a href='#!'>커리어 성장</a></li>
+                    <li className="border"><a href='#!'>기업 서비스</a></li>
+                    <GrayColored><a href='#!'>로그아웃</a></GrayColored>
                 </MobileMenuContents>
             </MobileMenu>
             {/* 상단 메인 메뉴 */}
@@ -303,23 +303,23 @@ const GlobalNavigationBar = () => {
                     <Navigation>
                         <Logo />
                         <StyledUl>
-                            <li className="mobile"><a>홈</a></li>
-                            <li className="mobile"><a>탐색</a></li>
-                            <li className="mobile"><a>커리어 성장</a></li>
-                            <li onMouseEnter={() => handleMouseHover(false)} onMouseLeave={() => handleMouseHover(true)}><a>탐색</a></li>
-                            <li><a>커리어 성장</a></li>
-                            <li><a>직군별 연봉</a></li>
-                            <li><a>이력서</a></li>
-                            <li><a>매치업</a></li>
-                            <li><a>프리랜서</a></li>
-                            <li><a>Ai 합격예측</a></li>
+                            <li className="mobile"><a href='#!'>홈</a></li>
+                            <li className="mobile"><a href='#!'>탐색</a></li>
+                            <li className="mobile"><a href='#!'>커리어 성장</a></li>
+                            <li onMouseEnter={() => handleMouseHover(false)} onMouseLeave={() => handleMouseHover(true)}><a href='#!'>탐색</a></li>
+                            <li><a href='#!'>커리어 성장</a></li>
+                            <li><a href='#!'>직군별 연봉</a></li>
+                            <li><a href='#!'>이력서</a></li>
+                            <li><a href='#!'>매치업</a></li>
+                            <li><a href='#!'>프리랜서</a></li>
+                            <li><a href='#!'>Ai 합격예측</a></li>
                         </StyledUl>
                         <StyledIconUI>
                             <IconButton><Badge badgeContent={'N'} color="primary"><AiOutlineSearch size="20px" /></Badge></IconButton>
                             <IconButton><AiOutlineBell size="20px" /></IconButton>
                             <IconButton className="profile"><Badge badgeContent={'N'} color="primary"><CgProfile size="20px" /></Badge></IconButton>
                             <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="mobile-menu"><AiOutlineMenu size="20px" /></button>
-                            <ServiceButton><a>기업 서비스</a></ServiceButton>
+                            <ServiceButton><a href='#!'>기업 서비스</a></ServiceButton>
                         </StyledIconUI>
                     </Navigation>
                 </Container>
@@ -327,43 +327,43 @@ const GlobalNavigationBar = () => {
             {/* 메뉴 클릭시 아래로 내려오는 slide menu */}
             <MenuContainer className={showMenu ? 'active' : "none"} >
                 <MenuTable>
-                    <a><h2>영업</h2> <MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h2>영업</h2> <MdKeyboardArrowRight color="#999" /></a>
                     {SALES_MENU.map((item: any) => {
-                        return <a><h3>{item.name}</h3></a>
+                        return <a href='#!'><h3>{item.name}</h3></a>
                     })}
-                    <a><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
                 </MenuTable>
                 <MenuTable>
-                    <a><h2>미디어</h2> <MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h2>미디어</h2> <MdKeyboardArrowRight color="#999" /></a>
                     {MEDIA_MENU.map((item: any) => {
-                        return <a><h3>{item.name}</h3></a>
+                        return <a href='#!'><h3>{item.name}</h3></a>
                     })}
-                    <a><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
                 </MenuTable>
                 <MenuTable>
-                    <a><h2>인사</h2> <MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h2>인사</h2> <MdKeyboardArrowRight color="#999" /></a>
                     {HR_MENU.map((item: any) => {
-                        return <a><h3>{item.name}</h3></a>
+                        return <a href='#!'><h3>{item.name}</h3></a>
                     })}
-                    <a><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
                 </MenuTable>
                 <MenuTable>
-                    <a><h2>게임제작</h2> <MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h2>게임제작</h2> <MdKeyboardArrowRight color="#999" /></a>
                     {GAME_MENU.map((item: any) => {
-                        return <a><h3>{item.name}</h3></a>
+                        return <a href='#!'><h3>{item.name}</h3></a>
                     })}
-                    <a><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
                 </MenuTable>
                 <MenuTable>
-                    <a><h2>엔지니어링·설계</h2> <MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h2>엔지니어링·설계</h2> <MdKeyboardArrowRight color="#999" /></a>
                     {ENGINEERING_MENU.map((item: any) => {
-                        return <a><h3>{item.name}</h3></a>
+                        return <a href='#!'><h3>{item.name}</h3></a>
                     })}
-                    <a><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
+                    <a href='#!'><h3>더보기</h3><MdKeyboardArrowRight color="#999" /></a>
                 </MenuTable>
                 <MenuTable>
                     {ETC_MENU.map((item: any) => {
-                        return <a><h2>{item.name}</h2> <MdKeyboardArrowRight color="#999" /></a>
+                        return <a href='#!'><h2>{item.name}</h2> <MdKeyboardArrowRight color="#999" /></a>
                     })}
                 </MenuTable>
             </MenuContainer >

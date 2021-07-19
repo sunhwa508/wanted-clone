@@ -13,7 +13,7 @@ const LogoContainer = styled.div`
 const Logo = () => {
     return (
         <LogoContainer>
-            <a>wanted</a>
+            <a href='#!'>wanted</a>
         </LogoContainer>
     )
 }
