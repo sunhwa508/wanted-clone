@@ -22,7 +22,8 @@ LINK [프리온보딩코스 과제](https://www.notion.so/9e8ff10dd1614112a81797
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    // 아이콘과 Badge 아이콘 사용
+    // 아이콘과 Badge 사용
+    "react-icons": "^4.2.0",
     "@material-ui/core": "^4.12.1",
     "react-scripts": "4.0.3",
      //css in js 로 styled-components 사용

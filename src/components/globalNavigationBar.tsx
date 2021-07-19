@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Logo from './logo'
 import { AiOutlineBell, AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { CgProfile } from 'react-icons/cg'
-import { MdKeyboardArrowRight } from 'react-icons/md'
+import { MdKeyboardArrowRight } from 'react-icons/md';
 import { SALES_MENU, MEDIA_MENU, ENGINEERING_MENU, HR_MENU, GAME_MENU, ETC_MENU } from '../assets/datas/MenuDatas'
 import { Badge, IconButton } from '@material-ui/core';
 
