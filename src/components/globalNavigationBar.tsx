@@ -5,6 +5,7 @@ import { AiOutlineBell, AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'r
 import { CgProfile } from 'react-icons/cg'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { SALES_MENU, MEDIA_MENU, ENGINEERING_MENU, HR_MENU, GAME_MENU, ETC_MENU } from '../assets/datas/MenuDatas'
+import { Badge, IconButton } from '@material-ui/core';
 
 const Wrapper = styled.div`
     width:100%;
@@ -13,7 +14,14 @@ const Wrapper = styled.div`
     position: fixed;
     box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
     z-index:1;
-    
+    padding: 0 50px;
+    @media only screen and (max-width: 1200px) {
+        padding: 0 40px;
+    }
+    @media only screen and (max-width: 1200px) {
+        padding: 0 10px;
+    }
+
 `;
 const Container = styled.div`
     position: relative;
@@ -50,7 +58,7 @@ const StyledUl = styled.ul`
         position: relative;
         font-size: 14px;
         line-height: 50px;
-        font-weight: 600;
+        font-weight: 500;
         padding: 15px;
         &:hover{
             border-bottom:2px solid #258bf7;
@@ -78,7 +86,6 @@ const StyledIconUI = styled.ul`
     list-style: none;
     font-size:18px;
         & button{
-        margin: 5px 0 0;
         padding: 0 10px;
         border: 0;
         background: none;
@@ -124,7 +131,7 @@ const ServiceButton = styled.li`
         border: 1px solid #e1e2e3;
         border-radius: 15px;
         padding: 0 10px;
-        font-weight: 400;
+        font-weight: 500;
         white-space: nowrap;
         }
 
@@ -142,8 +149,9 @@ const MenuContainer = styled.div`
     display:flex;
     flex-direction: row;
     transition: 0.4s;
-    transform: translateY(-100%);
-    opacity: 0;
+    transform: translateY(5%);
+    opacity: 100;
+    padding:20px;
     &:hover{
         transform: translateY(5%);
         opacity: 100;
@@ -162,6 +170,9 @@ const MenuTable = styled.div`
     padding: 40px 20px 0 0;
     text-align: left;
     display:flex;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
         & a{
         cursor:pointer;
         display:flex;
@@ -170,12 +181,14 @@ const MenuTable = styled.div`
         padding-right: 20px;
         padding-bottom: 15px;
         font-weight: 500;
+        max-width: 150px;
         & h2{
             margin:0;
             font-size: 17px;
             color: #333;
             width: 100%;
             overflow: hidden;
+            text-overflow: ellipsis;
         }
         & h3{
             margin:0;
@@ -205,6 +218,7 @@ const MobileMenu = styled.div`
     border-radius: 0;
     overflow-x: hidden;
     overflow-y: auto;
+    cursor: pointer;
     @media only screen and (max-width: 767px) {
             &.showMobileMenu{
                 display:inline-block;
@@ -222,19 +236,35 @@ const MobileMenuContents = styled.ul`
     padding:0;
     list-style: none;
     & li{
+    height:50px;
+    cursor: pointer;
     padding: 15px 0;
     font-size: 20px;
     font-weight: 500;
     line-height: 1;
-    &.border{
-        padding-top: 15px;
-        border-top: 1px solid #eee;
-        margin-top: 15px;
+    display:list-item;
+    & a{
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
     }
-}
-
-
+        &.border{
+           padding-top: 15px;
+           border-top: 1px solid #eee;
+           margin-top: 15px;
+           & a{
+               margin-top:30px;
+               padding-top: 30px;
+           }
+        }
+    }
 `;
+
+const GrayColored = styled.li`
+color: #999;
+`;
+
 const GlobalNavigationBar = () => {
     const [showMenu, setShowMenu] = useState(false)
     const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -248,12 +278,12 @@ const GlobalNavigationBar = () => {
             <MobileMenu className={showMobileMenu ? "showMobileMenu" : "none"}>
                 <MobileMenuHeader>
                     <div>LOGO</div>
-                    <AiOutlineClose size="20px" onClick={() => setShowMobileMenu(!showMobileMenu)} >X</AiOutlineClose>
+                    <AiOutlineClose size="24px" color="#999" onClick={() => setShowMobileMenu(!showMobileMenu)} >X</AiOutlineClose>
                 </MobileMenuHeader>
                 <MobileMenuContents>
                     <MobileMenuHeader>
                         <li><a>MY 원티드</a></li>
-                        <CgProfile size="20px" onClick={() => setShowMobileMenu(!showMobileMenu)} />
+                        <CgProfile size="20px" />
                     </MobileMenuHeader>
                     <li><a>프로필</a></li>
                     <li className="border"><a>이력서</a></li>
@@ -264,7 +294,7 @@ const GlobalNavigationBar = () => {
                     <li className="border"><a>직군별 연봉</a></li>
                     <li><a>커리어 성장</a></li>
                     <li className="border"><a>기업 서비스</a></li>
-                    <li><a>로그아웃</a></li>
+                    <GrayColored><a>로그아웃</a></GrayColored>
                 </MobileMenuContents>
             </MobileMenu>
             {/* 상단 메인 메뉴 */}
@@ -285,9 +315,9 @@ const GlobalNavigationBar = () => {
                             <li><a>Ai 합격예측</a></li>
                         </StyledUl>
                         <StyledIconUI>
-                            <button><AiOutlineSearch size="20px" /></button>
-                            <button><AiOutlineBell size="20px" /></button>
-                            <button className="profile"><CgProfile size="20px" /></button>
+                            <IconButton><Badge badgeContent={'N'} color="primary"><AiOutlineSearch size="20px" /></Badge></IconButton>
+                            <IconButton><AiOutlineBell size="20px" /></IconButton>
+                            <IconButton className="profile"><Badge badgeContent={'N'} color="primary"><CgProfile size="20px" /></Badge></IconButton>
                             <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="mobile-menu"><AiOutlineMenu size="20px" /></button>
                             <ServiceButton><a>기업 서비스</a></ServiceButton>
                         </StyledIconUI>
@@ -337,10 +367,7 @@ const GlobalNavigationBar = () => {
                     })}
                 </MenuTable>
             </MenuContainer >
-
         </>
-
-
     )
 }
 export default GlobalNavigationBar

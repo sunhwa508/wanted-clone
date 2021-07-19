@@ -1,10 +1,8 @@
-import React from 'react';
 
+import GlobalNavigationBar from '../components/globalNavigationBar'
 const Index = () => {
     return (
-        <div>
-            main
-        </div>
+        <GlobalNavigationBar />
     )
 }
 export default Index;

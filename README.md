@@ -1,8 +1,10 @@
 <h1>Wanted clone Web 😎 😎</h1>
 
-<div><center>
+<center>
+<div>
  <img src="https://user-images.githubusercontent.com/61695175/126105378-d3adda43-4d36-4005-ad5a-10e36ccd17b9.png" width="500" height="auto">
-</div></center>
+</div>
+</center>
 
 ## Getting Started with Create React App
 npx create-react-app 리액트 앱 생성
@@ -21,7 +23,7 @@ LINK [프리온보딩코스 과제](https://www.notion.so/9e8ff10dd1614112a81797
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     // 아이콘 사용을 위해 사용
-    "react-icons": "^4.2.0",
+    "@material-ui/core": "^4.12.1",
     "react-scripts": "4.0.3",
      //css in js 로 styled-components 사용
     "styled-components": "^5.3.0",
