@@ -1,11 +1,8 @@
-import React, { Suspense } from 'react';
 import './App.css';
-import GlobalNavigationBar from './components/globalNavigationBar'
+import Page from './page'
 function App() {
   return (
-    <>
-      <GlobalNavigationBar />
-    </>
+    <Page />
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components'
 import Logo from './logo'
 import { AiOutlineBell, AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
@@ -244,6 +244,7 @@ const GlobalNavigationBar = () => {
 
     return (
         <>
+            {/* 모바일 메뉴 */}
             <MobileMenu className={showMobileMenu ? "showMobileMenu" : "none"}>
                 <MobileMenuHeader>
                     <div>LOGO</div>
@@ -265,8 +266,8 @@ const GlobalNavigationBar = () => {
                     <li className="border"><a>기업 서비스</a></li>
                     <li><a>로그아웃</a></li>
                 </MobileMenuContents>
-
             </MobileMenu>
+            {/* 상단 메인 메뉴 */}
             <Wrapper>
                 <Container>
                     <Navigation>
@@ -293,6 +294,7 @@ const GlobalNavigationBar = () => {
                     </Navigation>
                 </Container>
             </Wrapper >
+            {/* 메뉴 클릭시 아래로 내려오는 slide menu */}
             <MenuContainer className={showMenu ? 'active' : "none"} >
                 <MenuTable>
                     <a><h2>영업</h2> <MdKeyboardArrowRight color="#999" /></a>
