@@ -15,6 +15,11 @@ npx create-react-app 리액트 앱 생성
 ### ✔ Prerequisites
 LINK [프리온보딩코스 과제](https://www.notion.so/9e8ff10dd1614112a81797219b7e6742)
 
+### ✔ Deploy
+Netlify 무료배포 사이트를 아용하였습니다.
+> https://frosty-austin-47d306.netlify.app
+
+
 ### ✔ Installing
 ```javascript
     "@testing-library/jest-dom": "^5.14.1",
