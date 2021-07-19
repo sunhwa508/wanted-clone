@@ -6,6 +6,9 @@ const LogoContainer = styled.div`
         font-size: 20px;
         font-weight: bold;
     }
+    @media only screen and (max-width: 767px) {
+        display:none;
+}
 `;
 
 const Logo = () => {
