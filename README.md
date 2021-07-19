@@ -10,13 +10,15 @@
 npx create-react-app 리액트 앱 생성
 
 ### 프로젝트 시작하기
-### `npm start`
+ `npm start`
 
 ### ✔ Prerequisites
 LINK [프리온보딩코스 과제](https://www.notion.so/9e8ff10dd1614112a81797219b7e6742)
 
-### ✔ Deploy
-Netlify 무료배포 사이트를 아용하였습니다.
+### ✔ Built & Deploy
+`npm build`
+
+[Netlify](https://app.netlify.com/) 무료배포 사이트를 아용하였습니다.
 > https://frosty-austin-47d306.netlify.app
 
 
@@ -41,7 +43,7 @@ Netlify 무료배포 사이트를 아용하였습니다.
     "@types/styled-components": "^5.1.11",
     "typescript": "^4.3.5"
 ```
-### ✔ bugs
+### ✔ bugs 및 Acknowledgments
 >The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value. If you cannot provide an href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
 
 
