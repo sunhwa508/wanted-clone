@@ -1,10 +1,7 @@
 <h1>Wanted clone Web 😎 😎</h1>
 
-<center>
-<div>
- <img src="https://user-images.githubusercontent.com/61695175/126105378-d3adda43-4d36-4005-ad5a-10e36ccd17b9.png" width="500" height="auto">
-</div>
-</center>
+![ezgif-1-c8baaee4e3b5](https://user-images.githubusercontent.com/61695175/126275851-3aca485a-b72b-410a-a094-680668240e2b.gif)
+
 
 ## Getting Started with Create React App
 npx create-react-app 리액트 앱 생성
@@ -13,7 +10,7 @@ npx create-react-app 리액트 앱 생성
  `npm start`
 
 ### ✔ Prerequisites
-LINK [프리온보딩코스 과제](https://www.notion.so/9e8ff10dd1614112a81797219b7e6742)
+LINK [원티드 프리온보딩 기술과제](https://www.notion.so/9e8ff10dd1614112a81797219b7e6742)
 
 ### ✔ Built & Deploy
 `npm build`
