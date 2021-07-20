@@ -1,20 +1,10 @@
-import styled from 'styled-components'
-
-const LogoContainer = styled.div`
-    & a{
-        font-size: 20px;
-        font-weight: bold;
-    }
-    @media only screen and (max-width: 767px) {
-        display:none;
-}
-`;
+import * as Styled from "./style"
 
 const Logo = () => {
     return (
-        <LogoContainer>
+        <Styled.LogoContainer>
             <a href='#!'>wanted</a>
-        </LogoContainer>
+        </Styled.LogoContainer>
     )
 }
 
